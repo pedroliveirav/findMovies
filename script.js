@@ -15,7 +15,7 @@ const popularMoviesContent = document.querySelector('.findMovies-content');
 
 const getPopularMovies = () => {
 
-    fetch("https://api.themoviedb.org/3/movie/popular?api_key=76086750d951418bebc911d2566df20a&language=en-US&page=1").then(res => res.json()).then(res => {
+    fetch("https://api.themoviedb.org/3/movie/popular?api_key=c21528022006d9c82b5cb75486456ef0&language=en-US&page=1").then(res => res.json()).then(res => {
 
         for (let i = 0; i < res.results.length; i++) {
             popularMovies[i].style.backgroundImage = 'url(https://image.tmdb.org/t/p/original' + res.results[i].poster_path + ')';
@@ -41,7 +41,7 @@ const setDescription = (description) => {
 }
 
 const getMovieById = (id) => {
-    fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=76086750d951418bebc911d2566df20a&language=en-US`).then(res => res.json()).then(res => {
+    fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=c21528022006d9c82b5cb75486456ef0&language=en-US`).then(res => res.json()).then(res => {
 
         setTitle(res.title);
         setScore(res.vote_average);
@@ -58,7 +58,7 @@ const searchByTitle = () => {
     const movieTitleInput = document.querySelector('.findMovies-movie-title-input').value;
     const movieImage = document.querySelector('.findMovies-seached-film-image');
 
-    fetch(`https://api.themoviedb.org/3/search/movie?api_key=76086750d951418bebc911d2566df20a&query=${movieTitleInput}`).then(res => res.json()).then(res => {
+    fetch(`https://api.themoviedb.org/3/search/movie?api_key=c21528022006d9c82b5cb75486456ef0&query=${movieTitleInput}`).then(res => res.json()).then(res => {
         for (let i = 0; i < res.results.length; i++) {
             popularMovies[i].style.backgroundImage = 'url(https://image.tmdb.org/t/p/original' + res.results[i].poster_path + ')';
             popularMovies[i].setAttribute("id", res.results[i].id)
