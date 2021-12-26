@@ -1,0 +1,234 @@
+:root {
+    --color-white: #ffffff;
+    --color-neon-blue: #6FFFF6;
+    --color-turquoise: #6FFFBB;
+    --color-egg-yellow: #FFE600;
+    --color-blue-existential: #0b0256;
+    
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    overflow-y: visible !important; }
+
+/* Typography */
+
+.findMovies-logo {
+    font-size: 2rem;
+    line-height: 1.92rem;
+    font-family: 'Alatsi', sans-serif;
+    color: var(--color-white);
+}
+
+span {
+    font-size: 1rem;
+    line-height: 0.9rem;
+    font-family: 'Barlow Condensed', sans-serif;
+}
+
+h1 {  
+    font-size: 1rem;
+    line-height: 1.35rem;
+    font-family: 'Barlow Condensed', sans-serif;
+}
+
+h2 {
+    font-size: 0.45rem;
+    line-height: 1.35rem;
+    font-family: 'Barlow Condensed', sans-serif;
+}
+
+.findMovies-container a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+@media (min-width: 768px) {
+
+    .findMovies-logo {
+        font-size: 4rem;
+    }
+
+    span {
+        font-size: 2rem;
+    }
+
+    h1 {
+        font-size: 1.125rem;
+    }
+
+    h2 {
+        font-size: 0.75rem;
+    }
+
+
+}
+
+/* Background Image */
+
+.findMovies-background-image {
+    position: relative;
+    background-image: url(./images/no-way-home-2.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover !important;
+}
+
+.findMovies-background-image::before {
+    height: 100vh;
+    width: 100vw;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    
+}
+
+.findMovies-container {
+    position: relative;
+}
+
+/* Header */
+
+header a {
+    color: var(--color-neon-blue);
+    font-weight: 700;
+}
+
+header a:hover {
+    color: var(--color-turquoise);
+    transition: 0.4s;
+}
+
+header img {
+    height: 24px;
+}
+
+/* Popular movies */
+
+.findMovies-popular-movie-image {
+    width: 150px;
+    height: 300px;
+
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.findMovies-content {
+    margin-top: 100px;
+}
+
+/* Swiper */
+
+.findMoviesSwiper {
+    max-width: 1500px;
+}
+
+/* Movie data */
+
+.findMovies-movie-data {
+    padding: 100px 0 0 100px;
+}
+
+.findMovies-title,
+.findMovies-description {
+    color: var(--color-white);
+}
+
+.findMovies-score {
+    color: var(--color-egg-yellow);
+    padding-left: 20px;
+}
+
+/* About Page */
+
+.FindMoviesAbout-tittle h1{
+    Color: var(--color-white);
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 50px;
+    font-weight: 600;
+}
+
+.findMoviesAbout-text h2{
+    padding-top: 20px;
+    padding-left: 100px;
+    padding-right: 100px;
+    font-size: 18px;
+    color: var(--color-white);
+    font-weight: 500;
+    text-align: center;
+}
+
+/* Contact Page */
+
+.FindMoviesContact-tittle h1{
+    Color: var(--color-white);
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 50px;
+    font-weight: 600;
+}
+
+.findMoviesContact-text h2{
+    padding-top: 20px;
+    padding-left: 100px;
+    padding-right: 100px;
+    font-size: 30px;
+    color: var(--color-white);
+    font-weight: 500;
+    text-align: center;
+}
+
+.button-contact{
+    text-align: center;
+    padding-top: 20px;
+}
+
+.button-contact input{
+    text-transform: uppercase;
+    padding: 20px;
+    color: var(--color-white);
+    font-size: 24px;
+    font-weight: 700;
+    background-color: var(--color-blue-existential) ;
+    border-radius: 15px;
+    border-style: none;
+}
+
+.button-contact input:hover{
+    transform: scale(0.9);
+    transition: 200ms;
+}
+
+.findMovies-movie-title-input{
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: capitalize;
+    padding: 5px 15px;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 0px;
+
+    border-color: var(--color-blue-existential);
+    color: var(--color-blue-existential);
+    background-color: var(--color-neon-blue);
+}
+
+.findMovies-movie-title-input::placeholder{
+    color: var(--color-blue-existential);
+    font-weight: 500;
+}
+
+.findMovies-button-search{
+    padding: 5px;
+    background-color: var(--color-blue-existential);
+    border-style: none;
+    box-shadow: 2px 2px 5px 0px rgb(0 0 0 / 50%);
+}
